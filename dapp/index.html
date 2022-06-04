@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Real State Marketplace</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+  <!-- Container Start -->
+  <div class="container mt-5">
+
+    <h2>Real State MarketPlace</h5>
+
+      <hr>
+
+      <h4>Token Info</h4>
+
+      <!-- start Get Token Info -->
+      <div class="row mt-3">
+        <div class="col-12">
+          <spam style="margin-left: 1rem" id="token-name-info-output"></spam>
+          <spam style="margin-left: 1rem" id="token-symbol-info-output"></spam>
+        </div>
+      </div>
+      <!-- start Get Token Info -->
+
+      <hr>
+
+      <p>In this project you will be minting your own tokens to represent your title to the properties.
+        Before you mint a token, you need to verify you own the property.</p>
+      <p>zk-SNARKs was used to create a verification system which can prove you have title to the property
+        without revealing that specific information on the property. Now follow the steps to proove you are the
+        owner of the property and then mint a token</p>
+
+      <!-- start checkIfProofWasUsed -->
+      <div id="proof-status">
+        <div class="row mt-4">
+          <div class="col-12">
+            <label for="bt-check-id-has-proof">Check if the provided proof was already used:</label>
+            <spam id="has-proof"></spam>
+          </div>
+          <div class="col-12">
+            <button id="bt-check-id-has-proof" class="btn btn-primary mt-2">Check If Id Has Proof</button>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div id="ta-output-validation" class="col-12">
+            <label for="output-info-from-validation">Output Information</label>
+            <textarea class="form-control" id="output-info-from-validation" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- end checkIfProofWasUsed -->
+
+      <hr>
+
+      <!-- start connectMetamask -->
+      <div class="row top-20">
+        <div class="col-12">
+          <h6>Validate Property</h6>
+          <span class="mt-1">First, connect your account:</span>
+        </div>
+      </div>
+      <div class="row top-20">
+        <div class="col-12 v-align">
+          <button id="connect-metamsk" class="enableEthereumButton btn btn-success mt-1">Connect MetaMask</button>
+        </div>
+      </div>
+      <!-- end connectMetamask -->
+
+      <hr class="mt-4">
+
+      <!-- start AddSolution -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <label class="form">Account to Validate and Add a Solution</label>
+          <input type="text" id="ipt-account-validate" style="width: 100%;" placeholder="Your Account">
+        </div>
+        <div class="col-12">
+          <label class="form">Token ID</label>
+          <input type="text" id="ipt-token-validate" style="width: 100%;" placeholder="Token Id">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-4">
+          <button id="bt-check-proof" class="btn btn-primary">Validate Proof</button>
+        </div>
+      </div>
+      <!-- end AddSolution -->
+
+      <hr class="mt-4">
+
+      <!-- start Mint -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <label class="form">Mint Address</label>
+          <input type="text" id="ipt-mint-to-address" style="width: 100%;"
+            placeholder="Address to Mint - Filled clicking in 'Connect MetaMask' " readonly>
+        </div>
+        <div class="col-12">
+          <label class="form">Token ID</label>
+          <input type="text" id="ipt-token-mint" style="width: 100%;" placeholder="Token Id">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <input type="checkbox" id="mint-with-proof" name="mint-with-proof" value="" checked>
+          <label for="mint-with-proof">Mint with proof (must be checked only for first mint)</label>
+          <br/>
+          <button id="bt-mint-token" class="btn btn-primary">Mint</button>
+        </div>
+      </div>
+      <!-- end Mint -->
+
+      <hr class="mt-4">
+
+      <!-- start Get Token Uri -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <label class="form">Token ID</label>
+          <input type="text" id="ipt-get-uri-tokenid" style="width: 100%;" placeholder="Token Id">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <button id="bt-get-token-uri" class="btn btn-primary">Get Token Uri</button>
+        </div>
+        <div class="col-12 mt-3">
+          <spam id="token-base-uri"></spam>
+        </div>
+        <div class="col-12 mt-3">
+          <spam id="token-uri"></spam>
+        </div>
+      </div>
+      <!-- end Get Token Uri -->
+      </br></br></br>
+  </div>
+  <!-- Container End -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

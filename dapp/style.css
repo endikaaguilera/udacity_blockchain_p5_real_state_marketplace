@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(69, 69, 69);
+    color: white;
+}
+
+.v-align {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    color: white;
+    background-color: white;
+}
